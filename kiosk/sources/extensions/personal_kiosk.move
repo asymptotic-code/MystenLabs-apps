@@ -123,6 +123,10 @@ module kiosk::personal_kiosk {
         *df::borrow(kiosk::uid(kiosk), OwnerMarker {})
     }
 
+    public fun owner_no_verify_spec(kiosk: &Kiosk): address {
+        owner(kiosk)
+    }
+
     /// Try to get the owner of the Kiosk if the Kiosk is "personal". Returns
     /// None otherwise.
     public fun try_owner(kiosk: &Kiosk): Option<address> {
