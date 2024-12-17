@@ -123,7 +123,7 @@ module kiosk::personal_kiosk {
         *df::borrow(kiosk::uid(kiosk), OwnerMarker {})
     }
 
-    #[ext(no_verify)]
+    #[spec]
     public fun owner_spec(kiosk: &Kiosk): address {
         owner(kiosk)
     }
